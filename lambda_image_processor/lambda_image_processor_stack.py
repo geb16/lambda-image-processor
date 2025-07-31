@@ -117,7 +117,7 @@ class LambdaImageProcessorStack(Stack):
 
         # SNS Email Subscription
         sns_topic.add_subscription(
-            subs.EmailSubscription("sample@example.com") # Replace with your email address
+            subs.EmailSubscription("your-email@example.com") # Replace with your email address
         )
 
 
