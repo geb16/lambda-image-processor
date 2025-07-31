@@ -14,9 +14,9 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 from app.handler import resize_image
 
 def test_resize_image():
-    test_image_path = "C:\\Users\\bkute\\OneDrive\\Desktop\\Folders\\AI_agentv2.jpg"
+    test_image_path = "F:\\Users\\sample.jpg" # Replace with your actual test image path
     # Or better, use a relative path to your repo test data:
-    # test_image_path = os.path.join(os.path.dirname(__file__), "data", "sample.jpg") # Adjust as needed
+    # test_image_path = os.path.join(os.path.dirname(__file__), "data", "sample.jpg") # Adjust as needed with your test data directory
 
     with open(test_image_path, "rb") as img:
         image_bytes = img.read()
