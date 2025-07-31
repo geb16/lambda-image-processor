@@ -31,6 +31,7 @@ pip-wheel-metadata/
 # === AWS CDK ===
 .cdk.staging/
 cdk.out/
+cdk.json
 
 # === Dependency & Lock Files ===
 Pipfile.lock
@@ -77,8 +78,15 @@ desktop.ini
 *.sqlite3
 local_settings.py
 
+# === Vendor dependencies bundled in app/ ===
+app/*
+!app/handler.py
+!app/__init__.py
+
 # === Others (optional) ===
 *.ipynb_checkpoints/
 *.ipynb
 __snapshots__/
+source.bat
+
         
