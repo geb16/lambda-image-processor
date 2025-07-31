@@ -88,5 +88,3 @@ app/*
 *.ipynb
 __snapshots__/
 source.bat
-
-        
