@@ -113,27 +113,96 @@ In AWS Lambda Console:
 #### Python
 
 ```python
+# === Python Bytecode & Cache ===
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
+*.pyc
+.pytest_cache/
+*.coverage
+.cache/
+.mypy_cache/
+.dmypy.json
+.pyre/
+.coverage.*
+.tox/
 
-#### CDK
-cdk.out/
-.cdk.staging/
+# === Egg Info & Build Artifacts ===
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
 
-#### Virtual Env
+# === Virtual Environments ===
 .venv/
+venv/
 env/
+ENV/
+.venv.bak/
+pip-wheel-metadata/
 
-#### Editors & OS
+# === AWS CDK ===
+.cdk.staging/
+cdk.out/
+cdk.json
+
+# === Dependency & Lock Files ===
+Pipfile.lock
+poetry.lock
+package-lock.json
+poetry.lock
+
+# === Test Output ===
+htmlcov/
+coverage.xml
+nosetests.xml
+test-results.xml
+junit-*.xml
+
+# === IDEs & Editor Configs ===
 .vscode/
 .idea/
+*.sublime-workspace
+*.sublime-project
+
+# === OS Files ===
 .DS_Store
 Thumbs.db
+ehthumbs.db
+Icon?
+desktop.ini
 
-#### Others
+# === Log Files ===
 *.log
+*.out
+*.err
+
+# === Swap / Temp Files ===
 *.swp
+*.swo
+*.tmp
+*.bak
+
+# === Security / Credentials (you should use `.env` or AWS secrets manager) ===
 .env
+.env.*
+
+# === Local Development Files ===
+*.sqlite3
+local_settings.py
+
+# === Vendor dependencies bundled in app/ ===
+app/*
+!app/handler.py
+!app/__init__.py
+
+# === Others ===
+*.ipynb_checkpoints/
+*.ipynb
+__snapshots__/
+source.bat
 ```
 ---
 ### License
