@@ -1,4 +1,4 @@
-# 🖼️ AWS Lambda Image Processor (Python + CDK)
+# AWS Lambda Image Processor (Python + CDK)
 
 This serverless application automatically resizes `.jpg` images uploaded to an S3 bucket. It saves the resized images to another S3 bucket, logs metadata to DynamoDB, and sends an email notification using Amazon SNS.
 
@@ -10,7 +10,7 @@ This serverless application automatically resizes `.jpg` images uploaded to an S
 -  **Image Resizing**: Converts image to 256x256 using [Pillow](https://python-pillow.org)
 -  **DynamoDB Logging**: Stores metadata of original + resized images
 -  **SNS Notification**: Sends email alert after each processed image
--  **Deployable with AWS CDK v2**
+-  **Deployable with AWS CDK**
 
 ---
 
@@ -23,11 +23,7 @@ lambda-image-processor/
 │   ├── __init__.py
 │   └── handler.py                # Main Lambda logic
 │
-├── infra/                        # CDK Infrastructure
-│   ├── __init__.py
-│   └── lambda_image_stack.py    # CDK resources: S3, Lambda, DynamoDB, SNS
-│
-├── lambda_image_processor/      # CDK App Entry
+├── lambda_image_processor/      # CDK resources: S3, Lambda, DynamoDB, SNS
 │   ├── __init__.py
 │   └── lambda_image_processor_stack.py
 │
@@ -74,6 +70,7 @@ Upload .jpg images to the upload bucket (name printed in cdk deploy output). The
 In AWS Lambda Console:
    1. Go to the deployed Lambda function
    2. Create a test event with the following sample S3 trigger event:
+      
    
    ```json
       {
@@ -90,7 +87,8 @@ In AWS Lambda Console:
          }
       ]
       }
-      ```
+
+```
 
 ### 6. Tech Stack
    - Language: Python 3.12+
@@ -111,31 +109,10 @@ In AWS Lambda Console:
    - Add CloudWatch dashboards for monitoring
    - Enable multi-region failover for resilience
 
-### 9. License
-MIT License
-
-Copyright (c) 2025 Daniel Eyob
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
-### 10. .gitignore
+### 9. .gitignore
 #### Python
+
+```python
 __pycache__/
 *.py[cod]
 
@@ -157,4 +134,29 @@ Thumbs.db
 *.log
 *.swp
 .env
+```
+---
+### License
+MIT License
+
+Copyright (c) 2025 Daniel E.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
 
