@@ -10,7 +10,7 @@ This serverless application automatically resizes `.jpg` images uploaded to an S
 -  **Image Resizing**: Converts image to 256x256 using [Pillow](https://python-pillow.org)
 -  **DynamoDB Logging**: Stores metadata of original + resized images
 -  **SNS Notification**: Sends email alert after each processed image
--  **Deployable with AWS CDK**
+-  **Deployable with AWS CDK V2**
 
 ---
 
