@@ -42,8 +42,10 @@ lambda-image-processor/
 ### 1. Install Dependencies
 
 #### Create and activate virtual environment
+```python
 python3 -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
+source .venv/bin/activate        # In Windows: .venv\Scripts\activate
+```
 
 #### Install CDK and dependencies
 pip install -r requirements.txt
