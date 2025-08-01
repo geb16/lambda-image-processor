@@ -1,6 +1,6 @@
 # AWS Lambda Image Processor (Python + CDK)
 
-This serverless application automatically resizes `.jpg` images uploaded to an S3 bucket. It saves the resized images to another S3 bucket, logs metadata to DynamoDB, and sends an email notification using Amazon SNS.
+This serverless application automatically resizes `.jpg` images uploaded to an S3 bucket. It saves the resized images to another `S3 bucket`, `logs` `metadata` to `DynamoDB`, and sends an email notification using Amazon `SNS`.
 
 ---
 
@@ -48,20 +48,26 @@ source .venv/bin/activate        # In Windows: .venv\Scripts\activate
 ```
 
 #### Install CDK and dependencies
+```python
 pip install -r requirements.txt
+```
 
 ### 2. Bootstrap CDK
    * Only required on first deploy per AWS environment:
+```python
 cdk bootstrap aws://YOUR_ACCOUNT_ID/YOUR_REGION
-##### Example: cdk bootstrap aws://123456789012/eu-west-2
+```
+##### Example: `cdk bootstrap aws://123456789012/eu-west-2`
 
 ### 3. Deploy the Stack
 
+```python
 cdk deploy
+```
    -  After deployment, check your email and confirm the SNS subscription to receive notifications.
 
 ### 4. Uploading Images
-Upload .jpg images to the upload bucket (name printed in cdk deploy output). The Lambda function will:
+Upload .jpg images to the upload bucket (name printed in `cdk deploy output`). The Lambda function will:
 
    - Resize to 256x256
    - Upload to processed bucket
@@ -101,9 +107,9 @@ In AWS Lambda Console:
    - Notification: Amazon SNS
 
 ### 7. Environment Variables (Auto-injected by CDK)
-   - PROCESSED_BUCKET
-   - DDB_TABLE
-   - SNS_TOPIC_ARN
+   - `PROCESSED_BUCKET`
+   - `DDB_TABLE`
+   - `SNS_TOPIC_ARN`
 
 ### 8. Future Improvements
    - Add presigned URL support for uploads
