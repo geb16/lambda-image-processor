@@ -118,7 +118,7 @@ In AWS Lambda Console:
    - Enable multi-region failover for resilience
 
 ### 9. .gitignore
-.gitignore is provided in[.gitignore](https://github.com/geb16/lambda-image-processor/blob/main/.gitignore)
+.gitignore is provided in [.gitignore](https://github.com/geb16/lambda-image-processor/blob/main/.gitignore)
 ### License
 Please refer to [License](https://github.com/geb16/lambda-image-processor/blob/main/LICENSE)
 
