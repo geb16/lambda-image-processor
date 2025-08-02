@@ -41,7 +41,7 @@ lambda-image-processor/
 ## Deployment Instructions
 ### 1. Install Dependencies
 
-#### Create and activate virtual environment
+#### Create and activate a virtual environment
 ```python
 python3 -m venv .venv
 source .venv/bin/activate        # In Windows: .venv\Scripts\activate
@@ -113,127 +113,12 @@ In AWS Lambda Console:
 
 ### 8. Future Improvements
    - Add presigned URL support for uploads
-   - Automatically archive original images post-processing
+   - Automatically archive original images after post-processing
    - Add CloudWatch dashboards for monitoring
    - Enable multi-region failover for resilience
 
 ### 9. .gitignore
-#### Python
-
-```python
-# === Python Bytecode & Cache ===
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-*.pyc
-.pytest_cache/
-*.coverage
-.cache/
-.mypy_cache/
-.dmypy.json
-.pyre/
-.coverage.*
-.tox/
-
-# === Egg Info & Build Artifacts ===
-*.egg
-*.egg-info/
-dist/
-build/
-.eggs/
-
-# === Virtual Environments ===
-.venv/
-venv/
-env/
-ENV/
-.venv.bak/
-pip-wheel-metadata/
-
-# === AWS CDK ===
-.cdk.staging/
-cdk.out/
-cdk.json
-
-# === Dependency & Lock Files ===
-Pipfile.lock
-poetry.lock
-package-lock.json
-poetry.lock
-
-# === Test Output ===
-htmlcov/
-coverage.xml
-nosetests.xml
-test-results.xml
-junit-*.xml
-
-# === IDEs & Editor Configs ===
-.vscode/
-.idea/
-*.sublime-workspace
-*.sublime-project
-
-# === OS Files ===
-.DS_Store
-Thumbs.db
-ehthumbs.db
-Icon?
-desktop.ini
-
-# === Log Files ===
-*.log
-*.out
-*.err
-
-# === Swap / Temp Files ===
-*.swp
-*.swo
-*.tmp
-*.bak
-
-# === Security / Credentials (you should use `.env` or AWS secrets manager) ===
-.env
-.env.*
-
-# === Local Development Files ===
-*.sqlite3
-local_settings.py
-
-# === Vendor dependencies bundled in app/ ===
-app/*
-!app/handler.py
-!app/__init__.py
-
-# === Others ===
-*.ipynb_checkpoints/
-*.ipynb
-__snapshots__/
-source.bat
-```
----
+.gitignore is provided in[.gitignore](https://github.com/geb16/lambda-image-processor/blob/main/.gitignore)
 ### License
-MIT License
-
-Copyright (c) 2025 Daniel E.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
+Please refer to [License](https://github.com/geb16/lambda-image-processor/blob/main/LICENSE)
 
